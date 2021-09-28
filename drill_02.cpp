@@ -26,7 +26,7 @@
       int age;
       cout << "Enter your friend age: ";
       cin >> age;
-      if(age>110 || age<=0)
+      if(age>=110 || age<=0)
       {
         simple_error("you're kidding!");
       }
