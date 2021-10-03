@@ -64,11 +64,11 @@
 		
 		vector<double> v;
 
-        vector<double> v_meter;
+       		vector<double> v_meter;
 
 		double value;
 
-        string unit;
+       		string unit;
 
 		double sum=0;
 
@@ -85,25 +85,25 @@
 			cin >> value;
         	do 
         	{
-				if(trying > 0)
-				{
-					cout << "Try again" << endl;
-				}
+			if(trying > 0)
+			{
+				cout << "Try again" << endl;
+			}
 
-				cout << "Type an acceptable unit: (m/cm/in/ft): \t";
+			cout << "Type an acceptable unit: (m/cm/in/ft): \t";
 
-				cin >> unit;
+			cin >> unit;
 
-				if(unit== "cm" ||unit == "m" ||unit == "in" ||unit == "ft")
-				{
+			if(unit== "cm" ||unit == "m" ||unit == "in" ||unit == "ft")
+			{
 				logic = true;
-				}
-				else
-				{
+			}
+			else
+			{
 				logic = false;
-				} 
+			} 
 
-				trying=trying+1;
+			trying=trying+1;
 
         	}while(logic != true);
 		    
@@ -167,11 +167,11 @@
 			cin >> s;
 		
 		}
-    	sort(v_meter);
+    		sort(v_meter);
 			
 		for(int i = 0; i < v_meter.size(); i++)
 		{
-		cout << "Sorted Vector: " << v_meter[i] << " m" << endl;
+			cout << "Sorted Vector: " << v_meter[i] << " m" << endl;
 		}
 
 		return 0;
