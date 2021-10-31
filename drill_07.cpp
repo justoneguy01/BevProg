@@ -4,7 +4,7 @@
 	Helpful comments removed.
 	We have inserted 3 bugs that the compiler will catch and 3 that it won't.
 */
-//PASS (Hibás)
+//PASS (Hibás)!!!!!!!!!!!!!!!!!!!!!!!!
 
 #include "std_lib_facilities.h"
 
