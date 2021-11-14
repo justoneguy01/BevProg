@@ -1,38 +1,47 @@
-# include "../std_lib_facilities.h"
-
-namespace X 
-{
- 	int var = 0;
-        void print()
-        {
-            cout << var << '\n';
-        }
-
-}
-namespace Y 
-{
-	int var = 0;
-        void print()
-        {
-            cout << var << '\n';
-        }
+#include <iostream>
+namespace X{
+	int var;
+	void print()
+	{
+		std::cout << var << std::endl;
+	}
 }
 
-namespace Z 
+namespace Y
 {
- 	int var = 0;
-        void print()
-        {
-            cout << var << '\n';
-        }
+	int var;
+	void print()
+	{
+		std::cout << var << std::endl;
+	}
 }
 
-int main(){
+namespace Z
+{
+	int var;
+	void print()
+	{
+		std::cout << var << std::endl;
+	}
+}
+
+int main()
+{
 	X::var = 7;
 	X::print();
 	using namespace Y;
 	var = 9;
-        print();
+	print();
+	{
+		using Z::var;
+		using Z::print;
+		var = 11;
+		print();
+	}
+	print();
+	X::print();
+	return 0;
+}
         {
             using Z::var;
             using Z::print;
