@@ -54,7 +54,7 @@ int main()
     try
     {
 
-        Date today; //Példány készítése
+        Date today; 
 
         today.y = 1978;
         today.m = 6;
