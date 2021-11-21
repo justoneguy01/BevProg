@@ -19,37 +19,37 @@ enum class Month {
     jan, feb, mar, apr, may, jun, jul, aug, sept, oct, nov, dec
 };
 
-Month operator++(Month& m){ //Monthal térünk vissza
+Month operator++(Month& m){ 
     m = (m==Month::dec) ? Month::jan : Month(int(m)+1);
 	return m;
 }
 
-//kiiratás:
+
 ostream& operator<<(ostream& os, Month m){
     return os << months[int(m)];
 }
 
 class Date{
-private: //ezeket kívülről nem tudjuk majd elérni
+private: 
     int year, day;
-    Month month; //3 tag a structnak
-public:   //ezeket igen
+    Month month; 
+public:   
     class Invalid{};
 
-    Date(int y, Month m, int d): year(y), month(m), day(d){ if(!is_valid()) throw Invalid{}; } //Konstruktor: segítségével megtudjuk határozni hogyan jöjjön létre az objektum
-    void add_day(int n); //nap hozzáadása
+    Date(int y, Month m, int d): year(y), month(m), day(d){ if(!is_valid()) throw Invalid{}; } 
+    void add_day(int n); 
 
-    //Dátum ellenörzése, hogy érvényes-e
+
     bool is_valid();
 
-    //getter függvény: eltudjuk kérni a tagnak az értékét -> kiíratás
+    
     int get_year() {return year;}
     Month get_month() {return month;}
     int get_day() {return day;}
 
     
 
-    //setter függvények: betudjuk állítani az értéket
+ 
     void set_year(int y){
         if (y > 0){
             year = y;
@@ -80,7 +80,7 @@ bool Date::is_valid(){
 }
 
 void Date::add_day(int n)
-{ //Hozzáad valamennyi napot egy paraméterül adott naphoz.
+{ 
 
     day += n;
     while (day > 31)
@@ -102,7 +102,7 @@ int main()
     try
     {
 
-        Date today {2021, Month::dec, 23}; //Példány készítése
+        Date today {2021, Month::dec, 23}; 
         std::cout << "Date: " << today;
         Date tomorrow(today);
         tomorrow.add_day(40);
