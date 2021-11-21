@@ -1,8 +1,8 @@
 #include "std_lib_facilities.h"
 
 struct Date{
-    int year, month, day; //3 tag a structnak
-    Date(int y, int m, int d); //Konstruktor: segítségével megtudjuk határozni hogyan jöjjön létre az objektum
+    int year, month, day; 
+    Date(int y, int m, int d); 
     void add_day(int n);
 
 };
@@ -36,7 +36,7 @@ Date::Date(int y, int m, int d)
 }
 
 void Date::add_day(int n)
-{ //Hozzáad valamennyi napot egy paraméterül adott naphoz.
+{
 
     day += n;
     while (day > 31)
@@ -56,7 +56,7 @@ int main()
     try
     {
 
-        Date today {1978, 6, 25}; //Példány készítése
+        Date today {1978, 6, 25};
 
         std::cout << "Date: " << today.year << ". " << today.month << ". " << today.day << ".\n";
         today.add_day(4);
