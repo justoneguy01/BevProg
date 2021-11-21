@@ -1,8 +1,8 @@
 #include "std_lib_facilities.h"
 
-struct Date //structnak minden tagja publikus
+struct Date 
 {                
-    int y, m, d; //3 tag a structnak
+    int y, m, d; 
 };
 
 void init_date(Date &date, int y, int m, int d)
@@ -34,7 +34,7 @@ void init_date(Date &date, int y, int m, int d)
 }
 
 void add_day(Date &date, int n)
-{ //Hozzáad valamennyi napot egy paraméterül adott naphoz.
+{ 
 
     date.d += n;
     while (date.d > 31)
