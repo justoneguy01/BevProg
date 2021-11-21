@@ -1,17 +1,17 @@
 #include "std_lib_facilities.h"
 
 class Date{
-private: //ezeket kívülről nem tudjuk majd elérni
-    int year, month, day; //3 privát tag a Classnak
-public:   //ezeket eltudjuk érni.
-    Date(int y, int m, int d); //Konstruktor: segítségével megtudjuk határozni hogyan jöjjön létre az objektum
+private: 
+    int year, month, day; 
+public:   
+    Date(int y, int m, int d);
     void add_day(int n);
-    //getter függvény: eltudjuk kérni a tagnak az értékét -> kiíratás
+   
     int get_year() {return year;}
     int get_month() {return month;}
     int get_day() {return day;}
 
-    //setter függvények: betudjuk állítani az értéket
+
     void set_year(int y){
         if (y > 0){
             year = y;
@@ -68,7 +68,7 @@ Date::Date(int y, int m, int d)
 }
 
 void Date::add_day(int n)
-{ //Hozzáad valamennyi napot egy paraméterül adott naphoz.
+{ 
 
     day += n;
     while (day > 31)
@@ -88,7 +88,7 @@ int main()
     try
     {
 
-        Date today {2021, 12, 31}; //Példány készítése
+        Date today {2021, 12, 31}; 
 
         std::cout << "Date: " << today.get_year() << ". " << today.get_month() << ". " << today.get_day() << ".\n";
         today.add_day(4);
