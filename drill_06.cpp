@@ -82,7 +82,7 @@ Token Token_stream::get()
         cin.putback(ch);         // put digit back into the input stream
         double val;
         cin >> val;              // read a floating-point number
-        return Token('8', val);   // let '8' represent "a number"
+        return Token('k', val);   // let 'k' represent "a number"
     }
     default:
         error("Bad token");
@@ -112,7 +112,7 @@ double primary()
         if (t.kind != ')') error(" ')' expected"); //Szintaktikai hiba!!!!!!
             return d;
     }
-    case '8':            // we use '8' to represent a number
+    case 'k':            // we use '8' to represent a number
         return t.value;  // return the number's value
     default:
         error("primary expected");
